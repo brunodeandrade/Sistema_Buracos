@@ -5,11 +5,13 @@ DROP PROCEDURE IF EXISTS sp_update_endereco;
 DROP PROCEDURE IF EXISTS sp_update_buraco;
 DROP PROCEDURE IF EXISTS sp_update_pessoa;
 
-DELIMITER |
-COMMENT 'Esse script contém os procedimentos que serão chamados pelo usuário para
+comment 'Esse script contém os procedimentos que serão chamados pelo usuário para
 a atualização de dados em quaisquer tabelas'
+
+DELIMITER |
+
 create procedure procedure_update_uf(IN id INT,IN descricao_uf varchar(45))
-begin
+begin		
 	update uf set descricao_uf=descricao_uf where idUf=id;
 end;|
 
