@@ -1,4 +1,5 @@
-
+/*Esse script tem a função de chamar os respectivos procedures que contém
+os métodos UPDATE.*/
 
 CALL sp_update_uf(1,"Mudou1");
 CALL sp_update_uf(2,"Mudou2");

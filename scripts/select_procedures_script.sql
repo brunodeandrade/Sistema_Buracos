@@ -1,3 +1,6 @@
+/*Esse script contém os respectivos procedimentos que fazema seleção para vizualização
+ddo conteúdo de tabelas*/ 
+
 USE BD_Sistema_de_buracos;
 
 DELIMITER |
