@@ -1,3 +1,6 @@
+/*This script contains the procedures that will be called by the user to
+delete data in any tables*/
+
 USE BD_sistema_de_buracos;
 
 DROP PROCEDURE IF EXISTS sp_delete_buraco;
@@ -23,26 +26,41 @@ DELIMITER |
 CREATE PROCEDURE sp_delete_buraco (IN br INT)
 BEGIN
 	DELETE FROM buraco WHERE id=br ;
+		if id then
+			Select 'Nao foi possivel apagar o registro';
+		end if;
 END;|
 
 CREATE PROCEDURE sp_delete_cidadao(IN cd INT)
 BEGIN
 	DELETE FROM cidadao WHERE idCidadao=cd ;
+		if id then
+			Select 'Nao foi possivel apagar o registro';
+		end if;
 END;|
 
 CREATE PROCEDURE sp_delete_cidade(IN cid INT)
 BEGIN
 	DELETE FROM cidade WHERE idCidade=cid ;
+		if id then
+			Select 'Nao foi possivel apagar o registro';
+		end if;
 END;|
 
 CREATE PROCEDURE sp_delete_dano_ocorrido(IN dano INT)
 BEGIN
 	DELETE FROM dano_ocorrido WHERE Buraco_id=dano;
+		if id then
+			Select 'Nao foi possivel apagar o registro';
+		end if;
 END;|
 
 CREATE PROCEDURE sp_delete_endereco(IN ender INT)
 BEGIN
 	DELETE FROM endereco WHERE idEndereco=ender;
+		if id then
+			Select 'Nao foi possivel apagar o registro';
+		end if;
 END;|
 
 CREATE PROCEDURE sp_delete_equipamento(IN eqpmnt INT)

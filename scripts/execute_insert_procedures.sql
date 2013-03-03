@@ -1,3 +1,7 @@
+
+/*This script has a function call that contains the relevant procedures
+DELETE methods.*/
+
 USE BD_sistema_de_buracos;
 
 

@@ -1,3 +1,6 @@
+/*This script has a function call that contains the relevant procedures
+DROP methods.*/
+
 USE bd_sistema_de_buracos;
 
 

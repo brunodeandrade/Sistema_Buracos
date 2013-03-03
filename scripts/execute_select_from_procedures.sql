@@ -1,5 +1,6 @@
-/*Esse script tem a função de chamar os respectivos procedures que contém
-os métodos SELECT.*/
+
+/*This script has a function call that contains the relevant procedures
+SELECT methods.*/
 
 
 CALL sp_select_uf();
