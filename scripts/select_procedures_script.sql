@@ -2,7 +2,7 @@ USE BD_Sistema_de_buracos;
 
 DELIMITER |
 
-create procedure sp_select_buraco()
+create procedure sp_select_buraco()  
 begin
 	select * from buraco;
 end;|
