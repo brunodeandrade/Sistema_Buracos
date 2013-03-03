@@ -24,17 +24,19 @@ DELIMITER |
 create procedure sp_add_uf (idUF INT, descricao varchar(45))
 
 begin
-
+	
 	insert into uf(idUf,descricao_uf) values (idUf,descricao);
 
 	SELECT 'Inserção realizada com sucesso.';
-
-	EXCEPTION 
-		when VALUE_ERROR THEN 
-	SELECT 'Erro na inserção de dados';
+	
+	exception
+	when VALUE_ERROR THEN 
+	SELECT 'Erro na inserção de dados';	
 		when others then
 	SELECT 'Erro na inserção de dados';
+	
 end;|
+
 
 create procedure sp_add_sexo (idSexo INT, sexo varchar(250))
 begin
@@ -43,11 +45,11 @@ begin
 	SELECT 'Inserção realizada com sucesso.';
 
 	EXCEPTION 
-		when VALUE_ERROR THEN 
+	when VALUE_ERROR THEN 
 	SELECT 'Erro na inserção de dados';		
-	
-when others then
+	when others then
 	SELECT 'Erro na inserção de dados';
+
 end;|
 
 create procedure sp_add_cidade(idCidade INT, descCidade varchar(250), DDD INT, Uf_idUf INT)
@@ -208,3 +210,16 @@ begin
 end;|
 
 
+create procedure sp_add_uf (idUF INT, descricao varchar(45))  
+begin   
+
+insert into uf(idUf,descricao_uf) values (idUf,descricao); 
+ 
+ SELECT 'Inserção realizada com sucesso.';   
+
+EXCEPTION    
+when VALUE_ERROR THEN   
+SELECT 'Erro na inserção de dados';   
+when others then  SELECT 'Erro na inserção de dados'; 
+
+end;|
