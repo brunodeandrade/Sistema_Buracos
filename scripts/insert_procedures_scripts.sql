@@ -171,12 +171,11 @@ begin
 
 	SELECT 'Inserção realizada com sucesso.';
 
-	EXCEPTION 
+	EXCEPTION
 		when VALUE_ERROR THEN 
 	SELECT 'Erro na inserção de dados';
 		when others then
 	SELECT 'Erro na inserção de dados';
-
 end;|
 
 create procedure sp_add_equipe_reparo(matricula_representante INT, Funcionario_matricula INT, Equipamento_numero_de_serie INT, Funcionario_Pessoa_cpf INT, numero_funcionarios INT)
