@@ -1,3 +1,6 @@
+
+-- This script contain the procedure "ASSERT_id" to make  generic tests.
+
 DELIMITER |
 
 CREATE procedure ASSERT_id (id INT)

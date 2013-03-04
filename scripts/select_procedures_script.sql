@@ -10,7 +10,7 @@ create procedure sp_select_buraco()
 begin
 	select * from buraco;
 
-	EXCEPTION 
+	EXCEPTION 			
 	WHEN NO_DATA_FOUND THEN
         raise_application_error(-20001, 'Custom NO_DATA_FOUND');
 end;|
