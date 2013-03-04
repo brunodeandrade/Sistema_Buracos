@@ -1,4 +1,8 @@
 
+
+/*This script contains the procedures that will be called by the user to
+insert data in any tables*/
+
 USE BD_Sistema_de_buracos;
 
 DROP PROCEDURE IF EXISTS sp_add_buraco ;
@@ -24,12 +28,12 @@ DELIMITER |
 create procedure sp_add_uf (idUF INT, descricao varchar(45))
 
 begin
-	
+
 	insert into uf(idUf,descricao_uf) values (idUf,descricao);
 
 	SELECT 'Inserção realizada com sucesso.';
 	
-	exception
+	EXCEPTION		-- 
 	when VALUE_ERROR THEN 
 	SELECT 'Erro na inserção de dados';	
 		when others then
